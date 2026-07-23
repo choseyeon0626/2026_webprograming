@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3,li{color: brown;}
+        .warning {color: red; }
+        body.main {background-color: aliceblue;}
+        #list {background:mistyrose;}
+        div > strong {background: yellow;} /*부모자식 관계*/
+        ul > li > strong {color: blue;} /*자손 관계*/
+        h3:first-letter {color: red; font-size: 40px;}
+        li:hover {background-color: yellowgreen;}
+        * {font-family:'Times New Roman', Times, serif;}
+    </style>
+</head>
+<body class="main">
+<h3>Web Programming</h3>
+<hr>
+<div>
+     <div> 2학기 <strong>학습내용</strong> </div> 
+        <ul id="list">
+            <li>HTML</li>
+            <li><strong>CSS</strong></li>
+            <li>JavaScript</li>
+        </ul>
+    <div class="warning">60점 이하이면 F!</div>
+</div>
+</body>
+</html>

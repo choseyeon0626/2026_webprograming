@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    나라<input type="text" name="country" list="countries"><br>
+            <datalist id="countries">
+                <option value="영국">
+                <option value="호주">
+                <option value="일본">
+            </datalist>
+    온도설정 :10&deg;
+    <input type="range" min="10" max="30" list="temperatures">30&deg;
+            <!--datalist는 다른 것과 함께 사용합니다.-->
+            <datalist id="temperatures">
+                <option value="12" label="Low">
+                <option value="20" label="Medium">
+                <option value="28" label="High">
+            </datalist> 
+    </form>
+</body>
+</html>

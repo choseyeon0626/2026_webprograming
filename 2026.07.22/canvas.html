@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="600" ;"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+
+        let a = 30
+        let b = 40
+        let c = 50
+        for (let i = 0; i < 20; i++) {
+            a = a + 10
+            b = b + 30
+            c = c + 50
+            context.beginPath();
+            context.moveTo(a, b);
+            context.lineTo(b, c);
+            context.lineTo(c, a);
+            context.closePath();
+            context.stroke();
+        }
+        for (let i = 20; i >= 0; i--) {
+            a = a - 10
+            b = b - 30
+            c = c - 50
+            context.beginPath();
+            context.moveTo(b, a);
+            context.lineTo(c, b);
+            context.lineTo(a, c);
+            context.closePath();
+            context.stroke();
+        }
+    </script>
+</body>
+
+</html>

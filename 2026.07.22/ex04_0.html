@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 40px;
+    }
+
+    /* Grid에서 각 요소의 이름을 지정하는 역할 */
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .sidebar2 {
+      grid-area: sidebar2;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    .wrapper {
+      background-color: #fff;
+      color: #444;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "header header header header header"
+        "sidebar content content content sidebar2"
+        "sidebar content content content sidebar2"
+        "sidebar content content content sidebar2"
+        "footer footer footer footer footer";
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+          "header header header header header"
+          "sidebar content content content content"
+          "sidebar content content content content"
+          "sidebar content content content content"
+          "sidebar2 sidebar2 sidebar2 sidebar2 sidebar2"
+          "footer footer footer footer footer";
+
+      }
+    }
+
+    .box {
+      background-color: rgb(78, 80, 197);
+      color: #fff;
+      padding: 3px;
+    }
+
+    .header,
+    .footer {
+      background-color: rgb(207, 78, 78);
+    }
+
+    .sidebar2 {
+      background-color: rgb(92, 184, 127);
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box header">Header</div>
+    <div class="box sidebar">Menu</div>
+    <div class="box sidebar2">Sidebar 2</div>
+    <div class="box content">Main ContentMain ContentMain ContentMain ContentMain ContentMain ContentMain ContentMain
+      Content
+    </div>
+    <div class="box footer">Footer</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>소프트웨어 기술에 대한 의견을 듣습니다</title>
+    <style>
+        b {color: blue;}
+        body {font-family: "휴먼편지체"}
+        .title {color: brown; font-weight: 700; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+        #formmain {background-color: lightpink;}
+        #lasttext {border-radius: 5px; font-size: 12px; background: skyblue; padding: 0 10px;}
+    </style>
+</head>
+<body>
+    <h1 class="title">설문지</h1>
+    <p class="textfont">소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁 들립니다.</p>
+    <hr>
+    <form id="formmain">
+        <div>
+        <b>학년</b><input type="radio" name="grade" value="1">1학년
+            <input type="radio" name="grade" value="2">2학년
+            <input type="radio" name="grade" value="3" checked>3학년
+            <input type="radio" name="grade" value="4">4학년
+        <br>
+        <b>성별</b><input type="radio" name="manorwoman" value="1" checked>남
+            <input type="radio" name="manorwoman" value="1">여
+        <br>
+        <b>관심분야</b>     
+        <select name="like" size="1">
+        <option value="1" selected>잡지</option>
+        <option value="2">웹코딩</option>
+        <option value="3">UI/UX</option>
+        </select>
+        <br>
+        <b>진로(복수선택가능)</b>
+        <input type="checkbox" value="1">개발
+        <input type="checkbox" value="2">기획
+        <input type="checkbox" value="3">영업
+        <input type="checkbox" value="4" checked>디자인
+        <br>
+        </div>
+        <b>남기고싶은말</b> <textarea cols="20" rows="10" placeholder="글을 남겨주세여"></textarea>
+    </form>
+    <p id="lasttext">copyright 2022 by kitae</p>
+</body>
+</html>
