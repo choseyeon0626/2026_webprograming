@@ -10,8 +10,7 @@
 <script>
 	let price = 0;
 	let coffee = prompt("무슨 커피 드릴까요?","");
-	let cup = prompt("몇잔 드릴까요?","1");
-	cup = parseInt(cup);
+	let cup = parseInt(prompt("몇잔 드릴까요?","1"));
 	switch(coffee) {
 		case "아메리카노" : price = 1000*cup;
             break;          
