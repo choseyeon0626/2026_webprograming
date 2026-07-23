@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문을 활용한 성적 평가 프로그램</title>
+</head>
+<body>
+    <h3>조건문을 활용한 성적 평가 프로그램</h3>
+    <script>
+        let grade;
+        let score = prompt("학생의 점수를 입력하세여!!!")
+        score = parseInt(score);
+        if(score >= 90)
+            grade = "A";
+        else if(score >= 80)
+            grade = "B";
+        else if(score >= 80)
+            grade = "c";
+        else if(score >= 80)
+            grade = "D";
+        else 
+            grade = "F";
+        document.write(score + "는" + grade + "입니다.<br>")
+    </script>
+</body>
+</html>

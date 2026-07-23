@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>이름</h3>
+    <hr>
+    <script>
+        let ret = prompt("이름을 입력하세요", "DIO");
+        if (ret == null) {
+            document.write("<h3>무다무다무다무다무다</h3>")
+            document.write("취소 버튼이나 다이얼로그를 닫은 경우")
+        }
+        else if (ret == ""){
+            document.write("문자열 입력 없이 확인 버튼만 누른경우")
+        } else {
+            document.write(ret);
+        }
+    </script>
+</body>
+
+</html>
