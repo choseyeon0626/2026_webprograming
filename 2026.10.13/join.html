@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <h2>Array 객체의 join() 함수</h2>
+
+    <p>배열 : ["1", "2", "3"]</p>
+
+    <button onclick="joinComma()">쉼표로 연결</button>
+    <button onclick="joinHyphen()">하이픈으로 연결</button>
+    <button onclick="joinSpace()">공백으로 연결</button>
+
+    <h3>실행 결과</h3>
+    <div id="result"></div>
+
+    <script>
+        var nums = ["1", "2", "3"];
+
+        // 쉼표로 연결
+        //JavaScript의 join() 함수는 구분 기호를 지정하지 않으면 
+        // 기본적으로 쉼표(,)를 사용합니다.
+        function joinComma() {
+            var str = nums.join();
+            document.getElementById("result").innerHTML = str;
+        }
+
+        // 하이픈으로 연결
+        function joinHyphen() {
+            var str = nums.join("-");
+            document.getElementById("result").innerHTML = str;
+        }
+
+        // 공백으로 연결
+        function joinSpace() {
+            var str = nums.join(" ");
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</body>
+</html>

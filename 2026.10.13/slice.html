@@ -1,0 +1,41 @@
+<html>
+<body>
+    <h2>Array 객체의 slice() 함수</h2>
+
+    <p>초기 배열 : ["red", "green", "blue", "white", "black"]</p>
+
+    <button onclick="sliceArray1()">slice(2) 실행</button>
+    <button onclick="sliceArray2()">slice(1, 4) 실행</button>
+
+    <h3>실행 결과</h3>
+    <div id="result"></div>
+
+    <script>
+        var colors = ["red", "green", "blue", "white", "black"];
+
+        // ① 인덱스 2부터 끝까지 추출
+        function sliceArray1() {
+            var colors2 = colors.slice(2);
+
+            var str = "";
+            str += "추출된 배열 : " + colors2 + "<br>";
+            str += "원본 배열 : " + colors + "<br>";
+            str += "추출된 요소 개수 : " + colors2.length;
+
+            document.getElementById("result").innerHTML = str;
+        }
+
+        // ② 인덱스 1부터 4 직전까지 추출
+        function sliceArray2() {
+            var colors2 = colors.slice(1, 2);
+
+            var str = "";
+            str += "추출된 배열 : " + colors2 + "<br>";
+            str += "원본 배열 : " + colors + "<br>";
+            str += "추출된 요소 개수 : " + colors2.length;
+
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</body>
+</html>

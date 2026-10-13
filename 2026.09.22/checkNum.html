@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkNumeric(elem, msg, msg2) {
+            let exp = /^[0-9]{11}$/;
+            if (elem.value.match(exp)) {
+                alert(msg2);
+                return true;
+            } else {
+                alert(msg);
+                elem.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        전화번호(-없이 입력): <input type='text' id='phone' />
+        <input type='button' onclick="checkNumeric(document.getElementById('phone'), '11자리 전화번호 숫자만 입력하세요!','전화번호 입력완료')" value='확인' />
+    </form>
+</body>
+
+</html>

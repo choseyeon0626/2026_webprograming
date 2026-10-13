@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="push()">push ("4"."5")</button>
+    <button onclick="unshift()">push ("0")</button>
+    <div id="result"></div>
+    <script>
+        var nums = ["1", "2", "3"];
+        function push() {
+            var conut = nums.push("4", "5");
+            var str = "";
+            str += "추가된 배열" + nums.join(",") + "<br>";
+            str += "배열의 요소 개수" + conut;
+            document.getElementById("result").innerHTML = str;
+        }
+
+        function unshift() {
+            var conut = nums.unshift("0");
+            var str = "";
+            str += "추가된 배열" + nums.join(",") + "<br>";
+            str += "배열의 요소 개수" + conut;
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function sub(test,min,max) {
+        let s = parseInt(test.value);
+        let text = "";
+        if (isNaN(s)) {
+            text = "숫자를 입력해주세요!"
+        } else if (s >= min && s <= max) {
+            text = "입력한 숫자는 " + s + "입니다."
+        } else {
+            text = min + "부터 " + max + " 사이의 숫자를 입력해주세요!";
+        }
+        document.getElementById("result").innerHTML = text;
+    }
+        </script>
+</head>
+<body>
+    1부터 100 사이의 정수를 입력하시오
+    <form>
+        <input type="text" name="num" id="num" required>
+        <input type='button' onclick="sub(document.getElementById('num'), 1, 100)" value='확인' />
+    </form>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<body>
+    <h2>Array 객체의 splice() 함수</h2>
+
+    <p>초기 배열 : ["html", "css", "web", "jquery"]</p>
+
+    <button onclick="changeArray()">요소 교체</button>
+    <button onclick="insertArray()">요소 삽입</button>
+    <button onclick="resetArray()">초기화</button>
+
+    <h3>실행 결과</h3>
+    <div id="result"></div>
+
+    <script>
+        var study = ["html", "css", "web", "jquery"];
+
+        // ① 요소 교체
+        function changeArray() {
+            var item = study.splice(2, 1, "js");
+
+            var str = "";
+            str += "삭제된 요소 : " + item + "<br>";
+            str += "변경된 배열 : " + study + "<br>";
+            str += "배열 요소 개수 : " + study.length;
+
+            document.getElementById("result").innerHTML = str;
+        }
+
+        // ② 요소 삽입
+        function insertArray() {
+            var item = study.splice(2, 0, "jquery");
+            //두 번째 인수가 0이므로 기존 요소를 삭제하지 않고 새 요소만 추가합니다.
+            var str = "";
+            str += "삭제된 요소 : " + item + "<br>";
+            str += "변경된 배열 : " + study + "<br>";
+            str += "배열 요소 개수 : " + study.length;
+
+            document.getElementById("result").innerHTML = str;
+        }
+
+        // ③ 초기화
+        function resetArray() {
+            study = ["html", "css", "web", "jquery"];
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

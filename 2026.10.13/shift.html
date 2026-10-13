@@ -1,0 +1,28 @@
+<html>
+<body>
+    <h2>Array 객체의 shift() 함수</h2>
+
+    <p>초기 배열 : ["es6+", "node", "react", "angular", "vue"]</p>
+
+    <button onclick="deleteArray()">맨 앞 요소 삭제</button>
+
+    <h3>실행 결과</h3>
+    <div id="result"></div>
+
+    <script>
+        var js = ["es6+", "node", "react", "angular", "vue"];
+
+        function deleteArray() {
+            // 배열의 맨 앞 요소 삭제
+            var item = js.shift();
+
+            var str = "";
+            str += "삭제된 요소 : " + item + "<br>";
+            str += "남은 배열 : " + js + "<br>";
+            str += "배열 요소 개수 : " + js.length;
+
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</body>
+</html>

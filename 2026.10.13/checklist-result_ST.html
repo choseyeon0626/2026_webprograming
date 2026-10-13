@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array push(), splice() 실습</title>
+</head>
+
+<body>
+    <h2>Array 객체를 이용한 목록 관리</h2>
+
+    <input type="text" id="item" placeholder="항목 입력">
+    <button id="add" onclick="listup()">항목 추가</button>
+
+    <h3>항목 목록</h3>
+    <div id="itemList"></div>
+
+    <h3>실행 결과</h3>
+    <div id="result"></div>
+
+    <script>
+        var list = [];
+
+        function listup() {
+            let value = document.getElementById("item").value;
+            list.push(value);
+            document.getElementById("item").value = "";
+            rander();
+        }
+
+        function rander() {
+            let renderList = "<ul>";
+
+            for (i = 0; i < list.length; i++) {
+                renderList += "<li>" + list[i] + "<button onclick='deleteArray(" + i + ")'>X</button></li>";
+            }
+            renderList += "</ul>";
+
+            document.getElementById("itemList").innerHTML = renderList
+        }
+        function deleteArray(index) {
+            var item = list.splice(index, 1);
+            var str = "";
+            str += "삭제된요소" + item + "<br>";
+            str += "남은배열" + list + "<br>"
+            str += "남은요소개수" + list.length;
+            document.getElementById("result").innerHTML=str;
+            rander();
+        }
+    </script>
+</body>
+
+</html>

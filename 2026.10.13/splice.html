@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>초기배열 : ["html","css","web","jquery"]</p>
+    <button onclick="deleteArray()">splice(2,1)</button>
+    <div id="result"></div>
+    <script>
+        var num = ["html","css","web","jquery"];
+        function deleteArray() {
+            var item = num.splice(2,1,"js");
+            var str = "";
+            str += "삭제된요소" + item + "<br>";
+            str += "남은배열" + num + "<br>"
+            str += "남은요소개수" + num.length;
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</body>
+</html>

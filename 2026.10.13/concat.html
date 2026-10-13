@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showArray()">num.concat(char)</button>
+    <button onclick="showArray2()">char.concat(num)</button>
+    <div id="result"></div>
+    <script>
+        function showArray() {
+            var num = ["1", "2","3"];
+            var char = ["a", "b", "c", "d"];
+
+            var result1 = num.concat(char);
+            var str = "";
+            str += "num 배열 : " + num + "<br>";
+            str += "char 배열 : " + num + "<br><br>";
+            str += "num.concat(char) : " + result1 + "<br>";
+            document.getElementById("result").innerHTML=str;
+        }
+        function showArray2() {
+            var num = ["1", "2","3"];
+            var char = ["a", "b", "c", "d"];
+
+            var result1 = char.concat(num);
+            var str = "";
+            str += "num 배열 : " + num + "<br>";
+            str += "char 배열 : " + num + "<br><br>";
+            str += "char.concat(num) : " + result1 + "<br>";
+            document.getElementById("result").innerHTML=str;
+        }
+    </script>
+</body>
+
+</html>
